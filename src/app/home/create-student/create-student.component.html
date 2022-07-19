@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="add()">
+  <input type="text" formControlName="name" placeholder="Enter in name">
+  <input type="text" formControlName="age" placeholder="Enter in age">
+  <input type="text" formControlName="score" placeholder="Enter in score">
+  <select formControlName="clazzId">
+    <option *ngFor="let clazz of listClazz" [value]="clazz.id">
+      {{clazz.name}}
+    </option>
+  </select>
+  <button>Add</button>
+</form>
