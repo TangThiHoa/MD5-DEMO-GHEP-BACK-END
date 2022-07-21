@@ -1,0 +1,13 @@
+<form [formGroup]="updateForm" (ngSubmit)="updateStudent()">
+  <input type="hidden" formControlName="id" >
+  <input type="text" formControlName="name" placeholder="Enter in name">
+  <input type="number" formControlName="age" placeholder="Enter in age">
+  <input type="number" formControlName="score" placeholder="Enter in score">
+  <select formControlName="clazzId">
+    <option *ngFor="let clazz of clazz" [value]="clazz.id">
+      {{clazz.name}}
+    </option>
+  </select>
+  <button type="submit">Update</button>
+</form>
+

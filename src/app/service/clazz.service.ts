@@ -13,5 +13,16 @@ export class ClazzService {
   findAll() : Observable<Student[]>{
     return this.httpClient.get<Student[]>(this.API);
   }
-
+  save(clazz : any) {
+    return this.httpClient.post(this.API,clazz);
+  }
+  findById(id : any) :Observable<any>{
+    return this.httpClient.get(this.API+`/${id}`)
+  }
+  update(id:any , clazz:any) : Observable<any>{
+    return this.httpClient.put(this.API+ '/' +id,clazz)
+  }
+  delete(id :any){
+    return this.httpClient.delete(this.API+'/'+id)
+  }
 }

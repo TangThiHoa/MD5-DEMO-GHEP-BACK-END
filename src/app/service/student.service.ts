@@ -16,4 +16,13 @@ export class StudentService {
   save(student : Student): Observable<any>{
     return this.httpClient.post( this.API ,student);
   }
+  findById(id : any) : Observable<any>{
+    return this.httpClient.get(this.API+'/'+id);
+  }
+  update(id:any,book:any){
+    return this.httpClient.put(this.API+'/'+id,book)
+  }
+  delete(id:any){
+    return this.httpClient.delete(this.API+'/'+id)
+  }
 }

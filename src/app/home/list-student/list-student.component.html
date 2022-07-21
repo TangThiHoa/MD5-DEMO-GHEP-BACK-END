@@ -7,6 +7,8 @@
     <th scope="col">Age</th>
     <th scope="col">Score</th>
     <th scope="col">Clazz</th>
+<!--    <th scope="col">Action</th>-->
+<!--    <th scope="col">Action</th>-->
   </tr>
   </thead>
   <tbody>
@@ -16,6 +18,8 @@
     <td>{{item.age}}</td>
     <td>{{item.score}}</td>
     <td>{{item.clazz.name}}</td>
+   <td><button [routerLink]="['/home/edit-student', item.id]">Sửa</button></td>
+   <td><button routerLink="/delete-student/{{item.id}}">delete</button></td>
   </tr>
 
   </tbody>

@@ -11,6 +11,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CreateStudentComponent } from './home/create-student/create-student.component';
 import { ListStudentComponent } from './home/list-student/list-student.component';
+import { EditClassComponent } from './home/edit-class/edit-class.component';
+import { EditStudentComponent } from './home/edit-student/edit-student.component';
+import { DeleteStudentComponent } from './home/delete-student/delete-student.component';
+import { DeleteClazzComponent } from './home/delete-clazz/delete-clazz.component';
 
 
 
@@ -24,6 +28,10 @@ import { ListStudentComponent } from './home/list-student/list-student.component
     HomeComponent,
     CreateStudentComponent,
     ListStudentComponent,
+    EditClassComponent,
+    EditStudentComponent,
+    DeleteStudentComponent,
+    DeleteClazzComponent,
   ],
   imports: [
     BrowserModule,
